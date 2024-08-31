@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
@@ -108,8 +109,41 @@ class WeatherScreen extends StatelessWidget {
               height: 20,
             ),
             // additional information
-            const Placeholder(
-              fallbackHeight: 150,
+            const Text(
+              'Additional information',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            const Row(
+              children: [
+                Column(
+                  children: [
+                    Icon(
+                      Icons.water_drop,
+                      size: 32,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text('Humiditiy'),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text(
+                      '91%',
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                )
+              ],
             )
           ],
         ),
