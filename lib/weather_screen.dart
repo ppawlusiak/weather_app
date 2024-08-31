@@ -1,7 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:weather_app/additional_info_item.dart';
+import 'package:weather_app/hurly_forecast_item.dart';
 
 class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
@@ -91,7 +92,7 @@ class WeatherScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 16,
+              height: 8,
             ),
             const SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -117,78 +118,15 @@ class WeatherScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(
-              height: 20,
+              height: 8,
             ),
             const Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Column(
-                  children: [
-                    Icon(
-                      Icons.water_drop,
-                      size: 32,
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text('Humiditiy'),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      '91%',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    )
-                  ],
-                )
+                AdditionalInfoItem(),
+                AdditionalInfoItem(),
+                AdditionalInfoItem(),
               ],
-            )
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class HurlyForecastItem extends StatelessWidget {
-  const HurlyForecastItem({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 6,
-      child: Container(
-        width: 100,
-        padding: const EdgeInsets.all(8.0),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(12),
-        ),
-        child: const Column(
-          children: [
-            Text(
-              '03:00',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 8,
-            ),
-            Icon(
-              Icons.cloud,
-              size: 32,
-            ),
-            SizedBox(
-              height: 8,
-            ),
-            Text(
-              '300.12 °F',
-              style: TextStyle(
-                fontSize: 14,
-              ),
             )
           ],
         ),
