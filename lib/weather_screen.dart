@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:weather_app/additional_info_item.dart';
 import 'package:weather_app/hurly_forecast_item.dart';
 import 'package:http/http.dart' as http;
@@ -187,8 +188,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           data['list'][index + 1]['weather'][0]['main'];
                       final hourlyTemp =
                           hourlyForecast['main']['temp'].toString();
+                      final time = DateTime.parse(hourlyForecast['dt_txt']);
                       return HurlyForecastItem(
-                        time: hourlyForecast['dt_txt'].toString(),
+                        time: DateFormat.Hm().format(time),
                         temperature: hourlyTemp,
                         icon: hourlySky == 'Clouds' || hourlySky == 'Rain'
                             ? Icons.cloud
