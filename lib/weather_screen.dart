@@ -146,7 +146,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 ),
                 // forecast cards
                 const Text(
-                  'Weather Forecast',
+                  'Hourly Forecast',
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
@@ -155,35 +155,23 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 const SizedBox(
                   height: 8,
                 ),
-                const SingleChildScrollView(
+                SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      HurlyForecastItem(
-                        time: '00:00',
-                        icon: Icons.cloud,
-                        temperature: '300',
-                      ),
-                      HurlyForecastItem(
-                        time: '03:00',
-                        icon: Icons.sunny,
-                        temperature: '300',
-                      ),
-                      HurlyForecastItem(
-                        time: '06:00',
-                        icon: Icons.cloud,
-                        temperature: '300',
-                      ),
-                      HurlyForecastItem(
-                        time: '09:00',
-                        icon: Icons.sunny,
-                        temperature: '300',
-                      ),
-                      HurlyForecastItem(
-                        time: '12:00',
-                        icon: Icons.cloud,
-                        temperature: '300',
-                      ),
+                      for (int i = 0; i < 5; i++)
+                        HurlyForecastItem(
+                          time: data['list'][i + 1]['dt'].toString(),
+                          icon: data['list'][i + 1]['weather'][0]['main'] ==
+                                      'Clouds' ||
+                                  data['list'][i + 1]['weather'][0]['main'] ==
+                                      'Rain'
+                              ? Icons.cloud
+                              : Icons.sunny,
+                          temperature: data['list'][i + 1]['main']
+                                  ['temperature']
+                              .toString(),
+                        ),
                     ],
                   ),
                 ),
