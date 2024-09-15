@@ -1,7 +1,25 @@
 # weather_app
 
-A new Flutter project.
+A new Flutter project that will help you predict today's weather.
 
+# Installation
+
+To run it please:
+
+## Create account in OpenWeatherMap site:
+
+- [OpenWeatherMap site](https://home.openweathermap.org/users/sign_up)
+
+## Change API Key:
+
+```
+# Create new file in lib folder and name it secrets.dart
+```
+
+```
+# Create a constant called openWeatherAPIKey and assign Your API Key to it.
+![Constant in secrets.dart file](secrets_dart.jpg)
+```
 ## Getting Started
 
 This project is a starting point for a Flutter application.
