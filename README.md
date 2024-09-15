@@ -18,9 +18,10 @@ To run it please:
 
 ```
 # Create a constant called openWeatherAPIKey and assign Your API Key to it.
-![secrets_dart](https://github.com/user-attachments/assets/5a28b22d-9f12-49e4-9697-c8e5e2fb2af1)
 
 ```
+![secrets_dart](https://github.com/user-attachments/assets/69ad42ee-2b64-4b9e-9b6a-c93c6422b8aa)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
