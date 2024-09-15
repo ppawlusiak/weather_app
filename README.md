@@ -22,6 +22,13 @@ To run it please:
 ```
 ![secrets_dart](https://github.com/user-attachments/assets/69ad42ee-2b64-4b9e-9b6a-c93c6422b8aa)
 
+## TO DO:
+
+- Change city, now is only one option, and it is London.
+- Change degrees in Kelvin, Celcjus, etc...
+- Add GPS support for city determination.
+- Add Bloc\Cubit
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
