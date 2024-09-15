@@ -18,7 +18,7 @@ To run it please:
 
 ```
 # Create a constant called openWeatherAPIKey and assign Your API Key to it.
-![secrets_dart](https://github.com/user-attachments/assets/fb89d57f-2128-499a-8aa2-0546676347b1)
+![secrets_dart](https://github.com//ppawlusiak/weather_app/assets/fb89d57f-2128-499a-8aa2-0546676347b1)
 
 ```
 ## Getting Started
